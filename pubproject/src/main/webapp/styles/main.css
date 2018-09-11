@@ -1,0 +1,51 @@
+*{
+	margin: 0;
+	padding: 0;
+	background-color: #FFFFF0;
+}
+
+body{
+	font-family: Arial, sans-serif;
+	font-size: 15px;
+}
+
+h1{
+	font-family: "Crete Round", serif;
+	font-size: 45px;
+	color: 444;
+}
+
+.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.orange{
+	color:#ff7a00;
+}
+
+.login{
+	font-weight: bold;
+
+}
+.logo{
+	
+	width: 80%
+	opacity: 0.2%
+}
+
+footer{
+	background: #FFFFF0;
+	position:fixed;
+	bottom:0px;
+	height:30px;
+	width:100%;		
+	padding: 50px 0 40px;
+}
+
+footer .glyphicon
+{
+	font-size: 25px;
+	margin: 20px;
+	color: #d82c2e;
+}
