@@ -1,46 +1,56 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
-integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<title> The George. </title>
-</head>
+<%@ include file="../common/header.jspf" %>
+
 <body>
 <header>
-	<div class="wrapper">
-    	<h1> The George <span class="orange">.</span></h1>
+	<div class="wrapper" >
+    	<h1 > The George <span class="orange">.</span></h1>
 	</div>
+	<div class="image" style="margin: -10px 480px;position:absolute;float:right;">
+		<img class = "img-circle" src="${pageContext.request.contextPath}/image/logo.jpg" alt="logo"/>
+	</div>
+	
+</header> 
 
-</header>
 <body>	
-	<div class="login">
-	<form action="/login" method="post">	
-	    <div class="container">
+	<c:if test="${success != null }">
+		<div class="alert alert-success" role="alert">
+			${success}
+		</div>
+	</c:if>
+	
+</div>
+<div class="container-fluid">
+	<form action="/login" method="post" style="margin: 100px 500px;position:absolute;float:center;" >	
+	<div class="form-group">
 	    <label for="username"><b>Username</b></label>
-	    <input type="text" placeholder="Enter Username" name="username" required>
-	
+	    <input type="text" placeholder="Enter Username" name="username" required class="form-control">
+	</div>
+	<div class="form-group">
 	    <label for="password"><b>Password</b></label>
-	    <input type="password" placeholder="Enter Password" name="password" required>
-	
-	    <button type="submit">Login</button>
+	    <input type="password" placeholder="Enter Password" name="password" required class="form-control">
+	</div>
+	    <button type="submit" class="btn btn-default">Login</button>
 	    <a href="/register">Register</a>	 
 	
 	</form>
-	</div>
-	
-	<img class = "logo" src="${pageContext.request.contextPath}/image/logo.jpg" alt="logo"/> 
+<!-- 
+	<div class="container">
+	<c:if test="${errorMessage != null }">
+		<div class="alert alert-danger mt-3" role="alert">
+			${errorMessage}
+		</div>
+	</c:if>
+ -->
 
-	<link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet">
-	<link rel="stylesheet" href="/styles/main.css">
+	
+<!-- <img class = "logo" src="${pageContext.request.contextPath}/image/logo.jpg" alt="logo"/>  -->	
+</div>
+
+	<!-- <link href="https://fonts.googleapis.com/css?family=Crete+Round" rel="stylesheet"> --> 
+	
+  <div class="card-footer text-muted" style="margin: 400px 600px;position:absolute;float:center;">
+   <b>ComIt © 2018</b> 
+  </div>	
 </body>
-	<footer class="text-center">
-		
-		<h5>The George<span class="orange">. </span> </h5>
-	</footer>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/styles/main.css" />
 </html>

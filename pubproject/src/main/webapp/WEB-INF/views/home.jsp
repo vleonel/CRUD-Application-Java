@@ -1,15 +1,4 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-	<link rel="stylesheet" href="styles/main.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <title> The George. </title>
-  </head>
+<%@ include file="../common/header.jspf" %>
 
   <body>
    <div class="Welcome">
@@ -23,10 +12,12 @@
 			}
 		}
 	%>
-	<form action="logout" method="post">
+	<form action="logout" method="post" style="margin: -20px 1300px;">
 		<input type="submit" value="logout">
 	</form>
-	<a href="/addItem">Add Item</a>
+	<div class="add" style="margin: 40px 600px;position:absolute;float:right;">
+		<a href="/addItem">Add Item</a>
+	</div>
    </div>   
 	<div class="container">
 		<h2 class="mt-4">
@@ -34,7 +25,6 @@
 		</h2>
                
          <table border="1" cellpadding="10" width="50%" class="table">
-            <caption><h2>List of Beverages</h2></caption>
             <thead class="thead-dark">
             <tr>
                 <th>Name</th>
@@ -68,4 +58,5 @@
 	</div>
     <footer></footer>
   </body>
+  <link rel="stylesheet" href="${pageContext.request.contextPath}/styles/main.css" />
 </html>

@@ -56,6 +56,7 @@ public class Register extends HttpServlet{
 				statement.executeUpdate();
 				
 				request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+				// request.setAttribute("success", "Successfully connected!");
 			}
 			catch (SQLException e) {
 	        e.printStackTrace();

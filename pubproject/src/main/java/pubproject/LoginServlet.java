@@ -59,7 +59,7 @@ public class LoginServlet extends HttpServlet {
 				
 			}
 			else {
-				// request.setAttribute("errorMessage", "Invalid Credentials");
+				request.setAttribute("errorMessage", "Invalid Credentials");
 				RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/login.jsp");
 				rd.include(request, response);
 			}
